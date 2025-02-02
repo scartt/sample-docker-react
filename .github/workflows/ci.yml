@@ -19,7 +19,7 @@ jobs:
         node-version: 22
 
     - name: Build Docker image
-      run: docker build -t scartt/sample-app .
+      run: docker build -t scartt/sample-docker-react .
 
     - name: Run tests
       run: echo "Put your testing command here if you have"
@@ -31,4 +31,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Docker image
-      run: docker image push scartt/sample-app
+      run: docker image push scartt/sample-docker-react
